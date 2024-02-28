@@ -1,7 +1,7 @@
 # nix-config
-My personal \* nix configuration files.
+My personal \*nix configuration files.
 
-**Neovim Configuration**
+**1. Neovim Configuration**
 
 This repository contains my personal Neovim configuration.
 
