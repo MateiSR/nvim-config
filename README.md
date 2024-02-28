@@ -27,7 +27,7 @@ This repository contains my personal Neovim configuration.
 
 5. Set up Neovim:
 
-    Backup your `~/.config/nvim` folder, then replace it with the `nvim` folder inside this repo. 
+    Backup your `~/.config/nvim` folder, then replace it with the `.config/nvim` folder inside this repo. 
 
 6. Launch Neovim:
 
@@ -35,8 +35,16 @@ This repository contains my personal Neovim configuration.
     
 Feel free to explore the configuration files to understand how different plugins are configured and integrated.
 
-### Feedback
+**2. Fish Configuration**
 
-If you have any suggestions, improvements, or feedback, feel free to open an issue or pull request in this repository. Your contributions are highly appreciated!
+1. Install ohmyfish:
+    
+    Check [GitHub](https://github.com/oh-my-fish/oh-my-fish) for instructions.
+2. Set the theme using `fish_config`
 
-Enjoy using Neovim with this configuration!
+    Install and set the [Catppuccin Machiatto Theme](https://github.com/catppuccin/fish). Follow the instructions given in their official repo.
+
+3. (Optional) Copy config files
+
+    Backup your `~/.config/fish` folder, then replace it with the `./config/fish` folder inside this repo.
+    
