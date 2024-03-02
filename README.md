@@ -28,8 +28,10 @@ This repository contains my personal Neovim configuration.
 5. Set up Neovim:
 
     Backup your `~/.config/nvim` folder, then replace it with the `.config/nvim` folder inside this repo. 
+    
     **Important: if using none-ls, make sure to install all the formatters & linters specified in `.config/nvim/none-ls.lua` from `:Mason`**
-
+    
+    **If using `lazygit.nvim`, make sure to install `lazygit` using your sistem's package manager (e.g. `pacman -S lazygit`)**
 6. Launch Neovim:
 
     Open Neovim. It will automatically install any missing plugins and apply the configuration.
