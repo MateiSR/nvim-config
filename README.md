@@ -50,4 +50,13 @@ Feel free to explore the configuration files to understand how different plugins
 3. (Optional) Copy config files
 
     Backup your `~/.config/fish` folder, then replace it with the `./config/fish` folder inside this repo.
-    
+
+**3. Tmux Configuration**
+
+1. Install tmux (e.g. `pacman -S tmux`)
+
+2. Install TPM (Tmux Plugin Manager)
+
+Follow the instructions at [TPM GitHub Page](https://github.com/tmux-plugins/tpm)
+
+3. Copy `.tmux.conf` to `~/`, and then fetch the plugins: `~/.tmux/plugins/tpm/bin/install_plugins`

@@ -337,7 +337,6 @@ fi
 #vimpm ()      { vim `perldoc -l $1 | sed -e 's/pod$/pm/'` }
 #vimhelp ()    { vim -c "help $1" -c on -c "au! VimEnter *" }
 
-fastfetch
 export GPG_TTY=$(tty)
 
 ## END OF FILE #################################################################
