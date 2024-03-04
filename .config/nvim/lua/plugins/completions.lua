@@ -1,6 +1,6 @@
 return {
-  -- https://raw.githubusercontent.com/cpow/neovim-for-newbs/main/lua/plugins/completions.lua
-  {
+	-- https://raw.githubusercontent.com/cpow/neovim-for-newbs/main/lua/plugins/completions.lua
+	{
 		"hrsh7th/cmp-nvim-lsp",
 	},
 	{

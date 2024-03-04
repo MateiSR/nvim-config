@@ -17,9 +17,11 @@ This repository contains my personal Neovim configuration.
 
     Follow the installation instructions provided on the [Neovim website](https://neovim.io/).
 
-3. Install ripgrep:
+3. Install ripgrep (and clang):
 
     Ensure that you have ripgrep installed on your system. You can install it via your package manager or download it from the [ripgrep GitHub repository](https://github.com/BurntSushi/ripgrep).
+
+    If using clang-format, make sure to install clang using your sistem's package manager (e.g. `pacman -S clang`).
 
 4. Install a Nerd Font:
 
@@ -32,6 +34,9 @@ This repository contains my personal Neovim configuration.
     **Important: if using none-ls, make sure to install all the formatters & linters specified in `.config/nvim/none-ls.lua` from `:Mason`**
     
     **If using `lazygit.nvim`, make sure to install `lazygit` using your sistem's package manager (e.g. `pacman -S lazygit`)**
+
+    **If using `nvim-dap-ui`, make sure to install `codelldb` and other DAPs specified in the `.config/nvim/lua/plugins/dap.lua` file** 
+
 6. Launch Neovim:
 
     Open Neovim. It will automatically install any missing plugins and apply the configuration.
