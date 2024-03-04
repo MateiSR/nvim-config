@@ -13,3 +13,6 @@ vim.opt.rtp:prepend(lazypath)
 
 require("vim-options")
 require("lazy").setup("plugins")
+
+local compile_and_run = require('compile_and_run')
+vim.api.nvim_set_keymap('n', '<leader>cr', ':lua require("compile_and_run").CompileAndRun()<CR>', {noremap = true, silent = true})
