@@ -2,7 +2,7 @@ avahi
 curl
 dnsutils
 firewalld
-iptables-nft
+iptables-nft # remove/replace with iptables if needed
 net-tools
 netctl
 networkmanager

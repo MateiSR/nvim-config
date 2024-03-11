@@ -8,3 +8,5 @@ libreoffice-fresh
 neofetch
 qbittorrent
 upower
+neovim
+tmux
