@@ -3,7 +3,7 @@ My personal \*nix configuration files.
 
 **1. Neovim Configuration**
 
-This repository contains my personal Neovim configuration.
+This repository contains my personal Neovim configuration, among other dotfiles.
 
 ### Usage
 

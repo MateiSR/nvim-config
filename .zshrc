@@ -30,6 +30,8 @@ if [ -r ~/.zshrc -a -r ~/.zshrc.global -a ! -r ~/.zshrc.local ] ; then
     printf '-!-\n'
 fi
 
+eval "$(starship init zsh)"
+
 ## Settings for umask
 #if (( EUID == 0 )); then
 #    umask 002
@@ -337,6 +339,10 @@ fi
 #vimpm ()      { vim `perldoc -l $1 | sed -e 's/pod$/pm/'` }
 #vimhelp ()    { vim -c "help $1" -c on -c "au! VimEnter *" }
 
+# ~/.zshrc
+
+##export GPG_TTY =$(tty)
+eval "$(starship init zsh)"
 export GPG_TTY=$(tty)
 
 ## END OF FILE #################################################################
