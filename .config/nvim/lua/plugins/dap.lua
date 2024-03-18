@@ -24,11 +24,11 @@ return {
 		},
 		config = function()
 			local dap, dapui = require("dap"), require("dapui")
-
+      dapui.setup()
 			-- Setup C/C++/Rust DAP
 			dap.adapters.lldb = {
 				type = "executable",
-				command = "$HOME/.local/share/nvim/mason/bin/codelldb", -- Installed through mason
+				command = "/home/matei/.local/share/nvim/mason/bin/codelldb", -- Installed through mason
 				name = "lldb",
 			}
 
