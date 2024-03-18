@@ -12,5 +12,5 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("vim-options")
-vim.keymap.set("n", "<leader>cr", require("compile_and_run").CompileAndRun, {})
+require("mappings")
 require("lazy").setup("plugins")

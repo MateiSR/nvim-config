@@ -1,5 +1,5 @@
 dkms
-intel-media-driver / NVIDIA / libva-mesa-driver (or mesa-vdpau**)
+
 libva-utils
 linux-headers
 mesa
