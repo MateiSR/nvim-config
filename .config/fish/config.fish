@@ -11,4 +11,5 @@ zoxide init fish | source
 ### Aliases
 alias cd="z"
 
-
+### Exports
+set -x GPG_TTY (tty)
