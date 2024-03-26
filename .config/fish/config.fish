@@ -1,6 +1,5 @@
-alias zyp="sudo zypper"
-alias zypup="sudo zypper dup"
 alias alki="sh ~/Documents/alki/bin/alki.sh"
+alias nvchad='NVIM_APPNAME="nvim-nvchad" nvim'
 
 if status is-interactive
     # Commands to run in interactive sessions can go here

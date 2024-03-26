@@ -24,7 +24,7 @@ return {
 		},
 		config = function()
 			local dap, dapui = require("dap"), require("dapui")
-      dapui.setup()
+			dapui.setup()
 			-- Setup C/C++/Rust DAP
 			dap.adapters.lldb = {
 				type = "executable",
