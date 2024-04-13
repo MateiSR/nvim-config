@@ -1,0 +1,65 @@
+import = [
+    "~/.config/alacritty/themes/themes/kanagawa_wave.toml"
+]
+
+shell = "/bin/fish"
+
+# Working directory
+working_directory = "None"  # Default: "None"
+
+# Live config reload (changes require restart)
+live_config_reload = true  # Default: true
+
+ipc_socket = true # Default: true
+
+[env]
+TERM = "xterm-256color"
+
+[window]
+
+# Window dimensions
+dimensions = { columns = 120, lines = 32 }  # Default: columns = 0, lines = 0
+
+# Window position
+position = { x = 384, y = 216 }  # Default: x = 0, y = 0
+
+# Window padding
+padding = { x = 0, y = 0 }  # Default: x = 0, y = 0
+
+opacity = 1.0  # Default: 1.0
+
+# Window title
+title = "Alacritty"  # Default: "Alacritty"
+
+# Window class
+class = "Alacritty"  # Default: "Alacritty"
+
+# Window dynamic title
+dynamic_title = true  # Default: true
+
+startup_mode = "Windowed"  # Default: "Normal"
+
+
+[scrolling]
+
+# Scrolling history
+history = 10000  # Default: 500
+
+# Scrolling multiplier
+multiplier = 3  # Default: 3
+
+[font]
+
+normal = { family = "JetBrainsMono NF", style = "Regular" }  # Default: family = "monospace", style = "Regular"
+
+# Bold font style
+bold = { style = "Bold" }  # Inherits family from normal, Default style: Bold
+
+# Italic font style
+italic = { style = "Italic" }  # Inherits family from normal, Default style: Italic
+
+# Bold Italic font style
+bold_italic = { style = "Bold Italic" }  # Inherits family from normal, Default style: Bold Italic
+
+# Font size in points
+size = 10  # Default: 11.25
