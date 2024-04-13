@@ -35,13 +35,26 @@ bind-key y set-window-option synchronize-panes\; display-message "sync mode togg
 set -g @plugin 'tmux-plugins/tpm'
 set -g @plugin 'tmux-plugins/tmux-sensible'
 set -g @plugin 'christoomey/vim-tmux-navigator'
+set -g @plugin 'catppuccin/tmux'
 
-set -g @plugin 'Nybkox/tmux-kanagawa'
+# Configure catppuccin
+set -g @catppuccin_flavour 'mocha'
+set -g @catppuccin_window_left_separator "█"
+set -g @catppuccin_window_right_separator "█ "
+set -g @catppuccin_window_number_position "right"
+set -g @catppuccin_window_middle_separator "  █"
 
-set -g @kanagawa-show-fahrenheit false
-set -g @kanagawa-plugins "cpu-usage gpu-usage ram-usage network-bandwidth"
+set -g @catppuccin_window_default_fill "number"
 
-set-option -g default-shell /bin/fish
+set -g @catppuccin_window_current_fill "number"
+set -g @catppuccin_window_current_text "#{pane_current_path}"
+
+set -g @catppuccin_status_modules_right "application session date_time"
+set -g @catppuccin_status_left_separator  ""
+set -g @catppuccin_status_right_separator " "
+set -g @catppuccin_status_right_separator_inverse "yes"
+set -g @catppuccin_status_fill "all"
+set -g @catppuccin_status_connect_separator "no"
 
 # Initialize TPM
 run '~/.tmux/plugins/tpm/tpm'
