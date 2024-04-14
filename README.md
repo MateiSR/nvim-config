@@ -23,6 +23,8 @@ This repository contains my personal Neovim configuration, among other dotfiles.
 
     If using clang-format, make sure to install clang using your sistem's package manager (e.g. `pacman -S clang`).
 
+    Also install 'xclip' for clipboard support (e.g. `pacman -S xclip`).
+
 4. Install a Nerd Font:
 
     I recommend using a font from [Nerd Fonts](https://www.nerdfonts.com/) to ensure proper display of icons and glyphs in Neovim. Download and install your preferred Nerd Font. *Do this if you have trouble with icons in neo-tree*.
