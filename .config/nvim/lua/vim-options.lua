@@ -22,3 +22,6 @@ opt.clipboard:append("unnamedplus") -- use system clipboard as default register
 
 -- turn off swapfile
 opt.swapfile = false
+
+-- set undofile
+opt.undofile = true
