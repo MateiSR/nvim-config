@@ -25,13 +25,19 @@ return {
     "neovim/nvim-lspconfig",
     config = function()
       local lspconfig = require("lspconfig")
-      lspconfig.lua_ls.setup({})
-      lspconfig.tsserver.setup({})
-      lspconfig.clangd.setup({})
-      lspconfig.pyright.setup({})
-      lspconfig.rust_analyzer.setup({})
-      lspconfig.biome.setup({})
-      lspconfig.html.setup({})
+      local servers = {
+        "lua_ls",
+        "tsserver",
+        "clangd",
+        "pyright",
+        "rust_analyzer",
+        "biome",
+        "html",
+      }
+
+      for _, server in ipairs(servers) do
+        lspconfig[server].setup({})
+      end
 
       vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
       vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, {})
