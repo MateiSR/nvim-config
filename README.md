@@ -1,5 +1,5 @@
-# nix-config
-My personal \*nix configuration files.
+# dotfiles
+mateisr.com
 
 **1. Neovim Configuration**
 
