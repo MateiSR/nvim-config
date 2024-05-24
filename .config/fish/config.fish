@@ -8,6 +8,9 @@ set -x LANG en_US.UTF-8
 # Editor
 set -x EDITOR /usr/bin/nvim
 
+# GPG's TTY variable
+set -x GPG_TTY (tty)
+
 # Aliases
 alias la='tree'
 alias cat='bat'
