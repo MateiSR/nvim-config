@@ -1,15 +1,112 @@
-alias alki="sh ~/Documents/alki/bin/alki.sh"
-alias nvchad='NVIM_APPNAME="nvim-nvchad" nvim'
+# Starship prompt initialization
+starship init fish | source
+# set -x STARSHIP_CONFIG ~/.config/starship/starship.toml
 
-if status is-interactive
-    # Commands to run in interactive sessions can go here
+# Language environment
+set -x LANG en_US.UTF-8
+
+# Editor
+set -x EDITOR /usr/bin/nvim
+
+# Aliases
+alias la='tree'
+alias cat='bat'
+
+# Git aliases
+alias gc='git commit -m'
+alias gca='git commit -a -m'
+alias gp='git push origin HEAD'
+alias gpu='git pull origin'
+alias gst='git status'
+alias glog="git log --graph --topo-order --pretty='%w(100,0,6)%C(yellow)%h%C(bold)%C(black)%d %C(cyan)%ar %C(green)%an%n%C(bold)%C(white)%s %N' --abbrev-commit"
+alias gdiff='git diff'
+alias gco='git checkout'
+alias gb='git branch'
+alias gba='git branch -a'
+alias gadd='git add'
+alias ga='git add -p'
+alias gcoall='git checkout -- .'
+alias gr='git remote'
+alias gre='git reset'
+
+# Docker aliases
+alias dco='docker compose'
+alias dps='docker ps'
+alias dpa='docker ps -a'
+alias dl='docker ps -l -q'
+alias dx='docker exec -it'
+
+# Directory navigation aliases
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias .....='cd ../../../..'
+alias ......='cd ../../../../..'
+
+# GO
+# set -x GOPATH /Users/omerhamerman/go
+
+# VIM alias
+alias v='/usr/bin/nvim'
+
+# Nmap alias
+alias nm='nmap -sC -sV -oN nmap'
+
+# Set PATH
+# set PATH /usr/local/bin /usr/bin /bin /usr/sbin /sbin /Users/omer/.vimpkg/bin $GOPATH/bin /Users/omerhamerman/.cargo/bin $PATH
+
+alias cl='clear'
+
+# K8S aliases
+# set -x KUBECONFIG ~/.kube/config
+# alias k='kubectl'
+# alias ka='kubectl apply -f'
+# alias kg='kubectl get'
+# alias kd='kubectl describe'
+# alias kdel='kubectl delete'
+# alias kl='kubectl logs'
+# alias kgpo='kubectl get pod'
+# alias kgd='kubectl get deployments'
+# alias kc='kubectx'
+# alias kns='kubens'
+# alias kl='kubectl logs -f'
+# alias ke='kubectl exec -it'
+# alias kcns='kubectl config set-context --current --namespace'
+# alias podname=''
+
+# HTTP requests with xh!
+alias http='xh'
+
+# Fish has built-in VI mode support, configure it if needed
+# Fish VI mode can be enabled with:
+# fish_vi_key_bindings
+
+# Eza aliases
+alias ls='eza -l --icons --git -a'
+alias lr='eza --tree --level=2 --long --icons --git'
+
+# FZF integration (Fish can source the FZF configuration directly)
+# set -x FZF_DEFAULT_COMMAND 'fd --type f --hidden --follow'
+# test -f ~/.fzf.fish; and source ~/.fzf.fish
+
+# Additional PATH setting
+# set -x PATH /opt/homebrew/bin $PATH
+
+# Navigation functions
+function cx
+    cd $argv; and la
+end
+function fcd
+    cd (find . -type d -not -path '*/.*' | fzf); and la
+end
+function f
+    echo (find . -type f -not -path '*/.*' | fzf) | pbcopy
+end
+function fv
+    nvim (find . -type f -not -path '*/.*' | fzf)
 end
 
-starship init fish | source
+# Zoxide initialization
 zoxide init fish | source
-
-### Aliases
 alias cd="z"
 
-### Exports
-set -x GPG_TTY (tty)
