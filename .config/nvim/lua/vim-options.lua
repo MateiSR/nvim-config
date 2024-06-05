@@ -6,7 +6,9 @@ vim.g.mapleader = " "
 
 local opt = vim.opt
 
+-- set hybrid line numbers
 opt.number = true
+opt.relativenumber = true
 
 -- search settings
 opt.ignorecase = true -- ignore case when searching
