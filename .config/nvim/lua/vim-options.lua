@@ -27,3 +27,6 @@ opt.swapfile = false
 
 -- set undofile
 opt.undofile = true
+
+-- set update time
+opt.updatetime = 250

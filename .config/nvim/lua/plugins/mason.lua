@@ -1,3 +1,18 @@
+-- Auto open diagnostics float on CursorHold
+vim.api.nvim_create_autocmd("CursorHold", {
+	callback = function()
+		local opts = {
+			focusable = false,
+			close_events = { "BufLeave", "CursorMoved", "InsertEnter", "FocusLost" },
+			border = "rounded",
+			source = "always",
+			prefix = " ",
+			scope = "cursor",
+		}
+		vim.diagnostic.open_float(nil, opts)
+	end,
+})
+
 -- Define the plugins for the mason plugin manager
 local servers = {
 	"lua_ls",
