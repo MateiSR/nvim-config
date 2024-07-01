@@ -1,15 +1,15 @@
 {
     "scripts": {
         "soundsLow": {
-            "exec": "play /usr/share/sounds/ocean/stereo/desktop-login.oga",
+            "exec": "play -v 0.2 /usr/share/sounds/ocean/stereo/dialog-information.oga",
             "urgency": "Low"
         },
         "soundsNorm": {
-            "exec": "play /usr/share/sounds/ocean/stereo/desktop-login.oga",
+            "exec": "play -v 0.2 /usr/share/sounds/ocean/stereo/dialog-warning.oga",
             "urgency": "Normal"
         },
         "soundsCrit": {
-            "exec": "play /usr/share/sounds/ocean/stereo/dialog-question.oga",
+            "exec": "play -v 0.2 /usr/share/sounds/ocean/stereo/dialog-error.oga",
             "urgency": "Critical"
         }
     }
