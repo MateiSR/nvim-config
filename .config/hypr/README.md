@@ -1,7 +1,7 @@
 ## hyprland dotfiles
 
 # dependencies
-rofi swaybg swaync xdg-deskop-portal-hyprland ffnvcodec-headers mpvpaper nm-applet waybar polkit-gnome alacritty wlsunset gnome-keyring hyprwayland-scanner hypridle
+rofi swaybg swaync xdg-deskop-portal-hyprland ffnvcodec-headers mpvpaper nm-applet waybar polkit-gnome alacritty wlsunset gnome-keyring hyprwayland-scanner hypridle pamixer dunst
 
 # optional dependencies
 jamesdsp 
