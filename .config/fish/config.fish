@@ -11,6 +11,9 @@ set -x EDITOR /usr/bin/nvim
 # GPG's TTY variable
 set -x GPG_TTY (tty)
 
+# Set wine prefix
+set -x WINEPREFIX /essd/wine
+
 # Aliases
 alias la='tree'
 alias cat='bat'
@@ -113,3 +116,8 @@ end
 zoxide init fish | source
 alias cd="z"
 
+# Source yazi yy script
+source ~/.config/yazi/yy.sh
+
+# Created by `pipx` on 2024-06-05 20:15:03
+set PATH $PATH /home/matei/.local/bin
