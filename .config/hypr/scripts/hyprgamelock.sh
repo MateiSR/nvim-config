@@ -21,8 +21,10 @@ if [ "$1" == "" ]; then
 	
 		hyprctl keyword monitor $(echo "$monitor" | jq -j ".name"),$(echo "$monitor" | jq -j ".width")x$(echo "$monitor" | jq -j ".height")@$(echo "$monitor" | jq -j ".refreshRate"),$(echo "$monitor" | jq -j ".x")x$unlockedMonitorYPosition,$(echo "$monitor" | jq -j ".scale") > /dev/null
 		
-		monitorUnlocked=1
-		
+		monitorUnlocked=1	
+    # Send notification, sleep, and swaync --kill-latest
+    notify-send "Monitor Unlocked" "Monitor $monitorIndex unlocked" --urgency normal && sleep 0.5 && swaync-client --close-latest
+
 		echo Unlocked monitor $monitorIndex
 	done
 
@@ -36,6 +38,8 @@ if [ "$1" == "" ]; then
 		hyprctl keyword monitor $(echo "$monitor" | jq -j ".name"),$(echo "$monitor" | jq -j ".width")x$(echo "$monitor" | jq -j ".height")@$(echo "$monitor" | jq -j ".refreshRate"),$(echo "$monitor" | jq -j ".x")x${lockedMonitorYPositions[$monitorIndex]},$(echo "$monitor" | jq -j ".scale") > /dev/null
 		
 		echo Locked monitor $monitorIndex
+    # Send notification, sleep, and swaync --kill-latest
+    notify-send "Monitor Locked" "Monitor $monitorIndex locked" --urgency normal && sleep 0.5 && swaync-client --close-latest
 		exit
 	done
 elif [ "$1" == "status" ]; then
