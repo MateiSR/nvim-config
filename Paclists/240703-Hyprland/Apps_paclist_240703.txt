@@ -13,6 +13,9 @@ neovim
 tmux
 kitty
 yazi
+bat
+zoxide
+fish
 tesseract-data-eng
 tesseract
 zathura
