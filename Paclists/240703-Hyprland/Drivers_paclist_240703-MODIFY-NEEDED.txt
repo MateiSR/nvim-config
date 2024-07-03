@@ -1,0 +1,8 @@
+dkms
+libva
+nvidia # Nvidia
+nvidia-lts # Nvidia
+libva-nvidia-driver # For nvidia hardware acceleration
+libva-utils
+linux-headers
+mesa

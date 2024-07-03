@@ -1,0 +1,5 @@
+xorg-xwayland
+xorg-server
+xorg-xinit
+xorg-xkill
+xterm
