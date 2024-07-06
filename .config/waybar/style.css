@@ -94,6 +94,11 @@ button:hover {
   color: @rosewater;
 }
 
+#tray {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
 .modules-right,
 .modules-left,
 .modules-center {

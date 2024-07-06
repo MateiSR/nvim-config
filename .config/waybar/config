@@ -5,7 +5,7 @@
         "margin-right": 10,
         "height" : 35,
         "modules-left": [
-            "hyprland/window"
+            "hyprland/window",
         ],
         "modules-center": [
             "hyprland/workspaces",
@@ -16,6 +16,7 @@
         "temperature",
         "battery",
         "clock",
+        "tray",
         "custom/notifications"
         ],
         "hyprland/window": {
@@ -46,6 +47,10 @@
     "default": ""
   },
   "sort-by-number": true
+},
+"tray": {
+    "icon-size": 21,
+    "spacing": 10
 },
     "custom/notifications": {
       "tooltip": false,
