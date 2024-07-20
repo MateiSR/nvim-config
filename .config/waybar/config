@@ -5,18 +5,20 @@
         "margin-right": 10,
         "height" : 35,
         "modules-left": [
+            "custom/appmenu",
             "hyprland/window",
         ],
         "modules-center": [
             "hyprland/workspaces",
         ],
         "modules-right": [
-            "pulseaudio",
+        "pulseaudio",
+        "bluetooth",
         "network",
         "temperature",
         "battery",
-        "clock",
         "tray",
+        "clock",
         "custom/notifications"
         ],
         "hyprland/window": {
@@ -103,11 +105,11 @@
         },
         "network": {
             "format-wifi": "  {signalStrength}%",
-            "format-ethernet": "{cidr} ",
+            "format-ethernet": "󰅟 {ifname} ",
             "tooltip-format": "{ifname} via {gwaddr} ",
             "format-linked": "{ifname} (No IP) ",
             "format-disconnected": " ⚠ ",
-            "format-alt": "{ifname}: {ipaddr}/{cidr}"
+            "format-alt": "󰅟 {ifname}: {ipaddr}/{cidr}"
         },
         "pulseaudio": {
             "format": "{icon}  {volume}%",
@@ -125,4 +127,22 @@
             },
             "on-click": "pavucontrol"
         },
+            "bluetooth": {
+        "format": " {status}",
+        "format-disabled": "",
+        "format-off": "",
+        "interval": 30,
+        "on-click": "blueman-manager",
+        "format-no-controller": ""
+    },
+    "custom/empty": {
+        "format": ""
+    },
+    "custom/appmenu": {
+        // START APPS LABEL
+        "format": "Apps",
+        // END APPS LABEL
+        "on-click": "sleep 0.2; bash ~/.config/rofi/scripts/appmenu.sh",
+        "tooltip-format": "Left: Open the application launcher"
+    },
 }
