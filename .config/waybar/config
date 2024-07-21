@@ -12,6 +12,7 @@
             "hyprland/workspaces",
         ],
         "modules-right": [
+        //"custom/ddcutil",
         "pulseaudio",
         "bluetooth",
         "network",
@@ -145,4 +146,15 @@
         "on-click": "sleep 0.2; bash ~/.config/rofi/scripts/appmenu.sh",
         "tooltip-format": "Left: Open the application launcher"
     },
+    "custom/ddcutil": {
+    "format": "{percentage}% {icon}",
+    "interval": 1,
+    "format-icons": ["", "", ""],
+    "exec": "~/.config/waybar/custom/waybar-ddcutil.py",
+    "return-type": "json",
+    "on-click": "com.sidevesh.Luminance",
+    //"on-scroll-up": "~/.config/waybar/custom/ddcutil-set.sh UP 10",
+    //"on-scroll-down": "~/.config/waybar/custom/ddcutil-set.sh DN 10",
+    },
+    
 }
