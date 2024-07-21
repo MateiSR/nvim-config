@@ -63,3 +63,5 @@ dunst
 kitty
 gdm
 swaybg
+rofimoji
+wtype
