@@ -23,6 +23,7 @@ local servers = {
 	"biome",
 	"html",
 	"bashls",
+  "gopls",
 }
 
 return {

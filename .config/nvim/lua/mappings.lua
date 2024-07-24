@@ -1,4 +1,4 @@
-vim.keymap.set({ "n", "v", "i" }, "<C-s>", ":up<CR>", {})
+vim.keymap.set("n", "<C-s>", ":up<CR>", {})
 vim.keymap.set("n", "<leader>h", ":terminal<CR>", {})
 -- bind quickfix
 vim.keymap.set("n", "<leader>q", ":copen<CR>", {})
