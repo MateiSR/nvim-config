@@ -16,14 +16,14 @@ vim.api.nvim_create_autocmd("CursorHold", {
 -- Define the plugins for the mason plugin manager
 local servers = {
 	"lua_ls",
-	"tsserver",
+	"ts_ls",
 	"clangd",
 	"pyright",
 	"rust_analyzer",
 	"biome",
 	"html",
 	"bashls",
-  "gopls",
+	"gopls",
 }
 
 return {

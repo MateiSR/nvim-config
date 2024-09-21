@@ -17,6 +17,7 @@ set -x WINEPREFIX /essd/wine
 # Aliases
 alias la='tree'
 alias cat='bat'
+alias ssh="kitty +kitten ssh"
 
 # Git aliases
 alias gc='git commit -m'
@@ -118,6 +119,10 @@ alias cd="z"
 
 # Source yazi yy script
 source ~/.config/yazi/yy.sh
+
+# Set theme
+set -g theme_color_scheme gruvbox
+set -g theme_nerd_fonts yes
 
 # Created by `pipx` on 2024-06-05 20:15:03
 set PATH $PATH /home/matei/.local/bin
