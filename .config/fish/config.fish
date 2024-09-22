@@ -18,6 +18,7 @@ set -x WINEPREFIX /essd/wine
 alias la='tree'
 alias cat='bat'
 alias ssh="kitty +kitten ssh"
+alias vv="~/.config/dotfiles/scripts/vv.sh"
 
 # Git aliases
 alias gc='git commit -m'
