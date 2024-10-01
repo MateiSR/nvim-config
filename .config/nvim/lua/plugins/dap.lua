@@ -16,6 +16,12 @@ return {
 			args = { "-i", "dap" },
 		}
 
+		dap.adapters.lldb = {
+			type = "executable",
+			command = "/usr/bin/lldb-dap",
+			name = "lldb",
+		}
+
 		require("cmp").setup({
 			enabled = function()
 				return vim.api.nvim_buf_get_option(0, "buftype") ~= "prompt" or require("cmp_dap").is_dap_buffer()
@@ -52,10 +58,49 @@ return {
 			},
 		}
 
+		local basic_lldb_configuration = {
+			--name = "debug",
+			type = "lldb",
+			request = "launch",
+			initCommands = function()
+				-- Find out where to look for the pretty printer Python module
+				local rustc_sysroot = vim.fn.trim(vim.fn.system("rustc --print sysroot"))
+
+				local script_import = 'command script import "' .. rustc_sysroot .. '/lib/rustlib/etc/lldb_lookup.py"'
+				local commands_file = rustc_sysroot .. "/lib/rustlib/etc/lldb_commands"
+
+				local commands = {}
+				local file = io.open(commands_file, "r")
+				if file then
+					for line in file:lines() do
+						table.insert(commands, line)
+					end
+					file:close()
+				end
+				table.insert(commands, 1, script_import)
+
+				return commands
+			end,
+			program = function()
+				return vim.fn.input("Path to executable: ", vim.fn.getcwd() .. "/", "file")
+			end,
+			cwd = "${workspaceFolder}",
+			stopAtBeginningOfMainSubprogram = false,
+			args = function()
+				local input = vim.fn.input("Arguments: ")
+				if input == "" then
+					return {}
+				end
+				return vim.split(input, " ")
+			end,
+		}
+
 		local c_gdb_config = basic_gdb_configuration
 		c_gdb_config.name = "debug c"
 		local cpp_gdb_config = basic_gdb_configuration
 		cpp_gdb_config.name = "debug cpp"
+		local rust_lldb_config = basic_lldb_configuration
+		rust_lldb_config.name = "debug rust (lldb)"
 
 		dap.configurations = {
 			c = {
@@ -63,6 +108,9 @@ return {
 			},
 			cpp = {
 				cpp_gdb_config,
+			},
+			rust = {
+				rust_lldb_config,
 			},
 		}
 
@@ -74,7 +122,7 @@ return {
 		end
 		local close_dapui = function()
 			dapui.close()
-      -- reopen neotree
+			-- reopen neotree
 			-- vim.cmd(":Neotree filesystem reveal left<CR>")
 		end
 		dap.listeners.before.attach.dapui_config = open_dapui
