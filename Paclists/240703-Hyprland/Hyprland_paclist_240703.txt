@@ -17,7 +17,6 @@ qt6ct
 shared-mime-info
 gtk3
 gtk4
-jamesdsp
 lib32-libpipewire
 lib32-pipewire
 gst-plugin-pipewire
