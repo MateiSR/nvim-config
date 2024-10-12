@@ -80,6 +80,6 @@ tab_bar_style powerline
 
 
 # BEGIN_KITTY_THEME
-# Everforest Dark Hard
+# Kanagawa
 include current-theme.conf
 # END_KITTY_THEME

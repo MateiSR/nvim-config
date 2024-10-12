@@ -21,9 +21,13 @@ button {
 	background-size: 25%;
 }
 
-button:focus, button:active, button:hover {
-	background-color: rgba(93, 116, 183, 0.5);
+button:focus, button:active {
+	background-color: #93b259;
 	outline-style: none;
+}
+button:hover {
+  background-color: #35a77c;
+  outline-style: none;
 }
 
 /* 

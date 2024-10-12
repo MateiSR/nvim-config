@@ -4,7 +4,7 @@ configuration {
 	drun-display-format:        "{name}";
 }
 
-@import "~/.config/rofi/colors/dark-purple.rasi"
+@import "~/.config/rofi/colors/everforest.rasi"
 @import                          "~/.config/rofi/fonts/shared.rasi"
 
 /*****----- Main Window -----*****/

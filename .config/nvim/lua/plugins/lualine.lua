@@ -3,7 +3,6 @@ return {
   config = function()
     -- Require the necessary modules
 local lualine = require('lualine')
-local kanagawa = require('kanagawa')
 
 -- Set Kanagawa colors
 local colors = {
@@ -57,7 +56,7 @@ local kanagawa_theme = {
 -- Setup lualine with the custom theme
 lualine.setup {
     options = {
-        theme = kanagawa_theme,
+        theme = 'everforest',
         section_separators = { left = '', right = '' },
         component_separators = { left = '', right = '' },
     },
