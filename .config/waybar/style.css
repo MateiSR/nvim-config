@@ -60,7 +60,7 @@ window#waybar {
 }
 
 #battery {
-  margin-right: 24px;
+  margin-right: 12px;
   color: #dee1e6;
   background: transparent;
 }
