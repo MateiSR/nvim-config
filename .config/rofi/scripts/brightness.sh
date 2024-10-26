@@ -3,11 +3,12 @@
 # options do be displayed
 theme="~/.config/rofi/themes/default.rasi"
 option0="two %"
-option1="twenty %"
-option2="forty %"
-option3="sixty %"
-option4="eighty %"
-option5="hundred %"
+option1="ten %"
+option2="twenty %"
+option3="forty %"
+option4="sixty %"
+option5="eighty %"
+option6="hundred %"
 
 # get number of monitors
 num_monitors=$(wayland-info | grep -c "interface: 'wl_output'")
@@ -19,36 +20,42 @@ options="$option0\n$option1\n$option2\n$option3\n$option4\n$option5"
 selected="$(echo -e "$options" | rofi -lines 5 -dmenu -theme $theme -p "brightness")"
 case $selected in
     $option0)
-        # Set brightness to 20% for all monitors
+        # Set brightness to 2% for all monitors
         for (( display=1; display<=$num_monitors; display++ )); do
             ddcutil setvcp 10 2 --display $display
         done
         ;;
     $option1)
+      # Set brightness to 10% for all monitors
+        for (( display=1; display<=$num_monitors; display++ )); do
+            ddcutil setvcp 10 10 --display $display
+        done
+        ;;
+    $option2)
         # Set brightness to 20% for all monitors
         for (( display=1; display<=$num_monitors; display++ )); do
             ddcutil setvcp 10 20 --display $display
         done
         ;;
-    $option2)
+    $option3)
         # Set brightness to 40% for all monitors
         for (( display=1; display<=$num_monitors; display++ )); do
             ddcutil setvcp 10 40 --display $display
         done
         ;;
-    $option3)
+    $option4)
         # Set brightness to 60% for all monitors
         for (( display=1; display<=$num_monitors; display++ )); do
             ddcutil setvcp 10 60 --display $display
         done
         ;;
-    $option4)
+    $option5)
         # Set brightness to 80% for all monitors
         for (( display=1; display<=$num_monitors; display++ )); do
             ddcutil setvcp 10 80 --display $display
         done
         ;;
-    $option5)
+    $option6)
         # Set brightness to 100% for all monitors
         for (( display=1; display<=$num_monitors; display++ )); do
             ddcutil setvcp 10 100 --display $display
