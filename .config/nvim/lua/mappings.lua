@@ -32,9 +32,9 @@ vim.keymap.set("n", "<C-d>", "<C-d>zz")
 -- Scroll up by half a screen and center the cursor
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 -- Move to the next search result and center the cursor
-vim.keymap.set("n", "n", "nzzzv", {noremap = true})
+vim.keymap.set("n", "n", "nzzzv", { noremap = true })
 -- Move to the previous search result and center the cursor
-vim.keymap.set("n", "N", "Nzzzv", {noremap = true})
+vim.keymap.set("n", "N", "Nzzzv", { noremap = true })
 -- Disable the 'Q' key in normal mode (prevents entering Ex mode)
 vim.keymap.set("n", "Q", "<nop>")
 -- Easy redo
@@ -43,3 +43,5 @@ vim.keymap.set("n", "U", "<C-r>")
 vim.keymap.set("n", "H", "^")
 -- Move to the end of the line
 vim.keymap.set("n", "L", "$")
+-- escape from insert mode
+vim.keymap.set("i", "jj", "<Esc>")
