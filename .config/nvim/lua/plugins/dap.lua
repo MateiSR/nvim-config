@@ -131,7 +131,10 @@ return {
 		dap.listeners.before.event_exited.dapui_config = close_dapui
 
 		vim.keymap.set("n", "<Leader>b", vim.cmd.DapToggleBreakpoint)
-		vim.keymap.set("n", "<F1>", vim.cmd.DapContinue)
+		vim.keymap.set("n", "<F1>", function()
+			vim.cmd.DapContinue()
+			vim.cmd.Neotree("toggle")
+		end)
 		vim.keymap.set("n", "<F2>", vim.cmd.DapStepInto)
 		vim.keymap.set("n", "<F3>", vim.cmd.DapStepOver)
 		vim.keymap.set("n", "<F4>", vim.cmd.DapStepOut)

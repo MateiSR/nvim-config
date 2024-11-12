@@ -1,6 +1,6 @@
 require("vim-options")
 require("mappings")
-require 'config.diagnostics'
+require("config.diagnostics")
 -- Setup lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
