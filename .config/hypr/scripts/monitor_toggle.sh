@@ -9,8 +9,10 @@ if [ $# -ne 2 ]; then
 fi
 
 # Define the monitor names
-monitor1="DP-1"
-monitor2="HDMI-A-1"
+monitor1=$1
+monitor2=$2
+echo "Monitor 1: $monitor1"
+echo "Monitor 2: $monitor2"
 
 # Toggle focus between the monitors
 if [ "$current_monitor" != "$monitor1" ]; then
