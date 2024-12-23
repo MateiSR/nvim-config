@@ -69,3 +69,4 @@ wob
 eza
 starship
 blueman
+brightnessctl
