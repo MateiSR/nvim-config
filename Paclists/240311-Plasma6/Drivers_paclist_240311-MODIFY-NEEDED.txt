@@ -1,5 +1,0 @@
-dkms
-
-libva-utils
-linux-headers
-mesa
