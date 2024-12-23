@@ -1,0 +1,7 @@
+nodejs
+npm
+yarn
+cmake
+meson
+cpio
+pkgconf
