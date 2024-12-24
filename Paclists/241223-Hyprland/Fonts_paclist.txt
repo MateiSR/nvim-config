@@ -18,4 +18,5 @@ ttf-roboto
 ttf-ubuntu-font-family
 ttf-jetbrains-mono-nerd
 ttf-firacode-nerd
+ttf-dejavu-nerd
 noto-fonts-emoji
