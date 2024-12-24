@@ -122,7 +122,7 @@ alias cd="z"
 source ~/.config/yazi/yy.sh
 
 # Set theme
-set -g theme_color_scheme gruvbox
+set -g theme_color_scheme dark 
 set -g theme_nerd_fonts yes
 
 # Created by `pipx` on 2024-06-05 20:15:03
