@@ -15,10 +15,10 @@ window#waybar {
 
 #workspaces button {
 	color: rgba(255, 255, 255, 0.4);
-  margin-right: 8px;
-  margin-left: 8px;
-  padding-right: 8px;
-  padding-left: 8px;
+  margin-right: 6px;
+  margin-left: 6px;
+  padding-right: 6px;
+  padding-left: 6px;
 }
 
 #workspaces button:hover {
