@@ -1,104 +1,101 @@
 * {
-  font-family: "DejaVuSansM Nerd Font";
-  font-size: 16px;
-  min-height: 0;
-  min-width: 0;
+	font-family: "DejaVuSansM Nerd Font";
+	font-size: 16px;
+	min-height: 0;
+	min-width: 0;
 }
 
 window#waybar {
-  border-radius: 12;
-  border: 3px solid #485263;
-  background-color: #171b20;
+	background-color: rgba(0, 0, 0, 1);
 }
 
 #workspaces {
-  margin-left: 5px;
+	margin-left: 5px;
 }
 
 #workspaces button {
-  color: rgba(255, 255, 255, 0.4);
-  margin-left: 4px;
-  background-color: transparent;
+	color: rgba(255, 255, 255, 0.4);
+  margin-right: 8px;
+  margin-left: 8px;
+  padding-right: 8px;
+  padding-left: 8px;
 }
 
-#workspaces button.hover {
-  background-color: transparent;
+#workspaces button:hover {
+	color: #000000;
+	background-color: #000000;
 }
 
 #workspaces button.active {
-  color: rgba(255, 255, 255, 0.8);
-  background-color: transparent;
+	color: rgba(255, 255, 255, 0.8);
 }
 
-#custom-player {
-  margin-left: 16px;
+#custom-launcher {
+	color: #ffffff;
+	margin-left: 1em;
 }
 
-#bluetooth {
-  margin-right: 8px;
-  color: #dee1e6;
-}
-
-#network {
-  margin-right: 13px;
-}
-
-#custom-updates {
-  font-size: 20px;
-  margin-right: 22px;
-  color: #dee1e6;
-}
-
-#pulseaudio {
-  margin-right: 12px;
-  color: #dee1e6;
-}
-
-#backlight {
-  margin-right: 12px;
-  color: #dee1e6;
-}
-
-#battery {
-  margin-right: 12px;
-  color: #dee1e6;
-  background: transparent;
-}
-
-#tray {
-  margin-right: 8px;
-}
-
-#battery.critical:not(.charging) {
-  color: #dee1e6;
-  animation-name: blink;
-  animation-duration: 0.5s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-}
-
-@keyframes blink {
-  to {
-    color: #e26c7c;
-  }
+#custom-separator {
+	color: #383838;
+	margin-left: 6px;
+	margin-right: 6px;
 }
 
 #clock {
-  color: #dee1e6;
-  margin-right: 8px;
+	color: #ffffff;
+	margin-right: 8px;
 }
 
 #custom-power {
-  font-size: 18px;
-  margin-right: 22px;
-  color: #e26c7c;
-  background: transparent;
+	font-size: 18px;
+	padding-right: 1.5em;
+	color: #e26c7c;
 }
 
 #custom-notifications {
-  font-size: 18px;
-  margin-right: 26px;
-  color: #dee1e6;
-  background: transparent;
+	font-size: 18px;
+	padding: 0.5em;
+	color: #ffffff;
+}
+#bluetooth {
+	color: #ffffff;
+}
+
+#network {
+	color: #ffffff;
+	padding: 0.5em;
+}
+
+#pulseaudio {
+	color: #ffffff;
+	padding: 0.5em;
+}
+
+#backlight {
+	color: #ffffff;
+	padding: 0.5em;
+}
+
+#battery {
+	color: #ffffff;
+	padding: 0.5em;
+}
+
+#tray {
+	margin-right: 8px;
+}
+
+#battery.critical:not(.charging) {
+	color: #ffffff;
+	animation-name: blink;
+	animation-duration: 0.5s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+}
+
+@keyframes blink {
+	to {
+		color: #e26c7c;
+	}
 }
