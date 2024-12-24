@@ -70,3 +70,4 @@ eza
 starship
 blueman
 brightnessctl
+sox
