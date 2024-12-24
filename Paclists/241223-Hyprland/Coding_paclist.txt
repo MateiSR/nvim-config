@@ -1,4 +1,5 @@
 nodejs
+prettier
 npm
 yarn
 cmake
