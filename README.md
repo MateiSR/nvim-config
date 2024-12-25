@@ -17,3 +17,6 @@ icons: https://github.com/vinceliuice/Tela-icon-theme
 
 
 change these using `nwg-look` & set rofi theme using `rofi-theme-selector`
+
+
+tmux: install TPM and `~/.tmux/plugins/tpm/bin/install_plugins`
