@@ -71,3 +71,4 @@ starship
 blueman
 brightnessctl
 sox
+ripgrep
