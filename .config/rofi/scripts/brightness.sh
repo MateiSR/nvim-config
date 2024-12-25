@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # options do be displayed
-theme="~/.config/rofi/themes/default.rasi"
+theme="~/.config/rofi/themes/squared-material-dark-orange.rasi"
 option0="two %"
 option1="ten %"
 option2="twenty %"
