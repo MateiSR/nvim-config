@@ -24,3 +24,4 @@ zathura-ps
 zathura-cb
 btop
 flameshot
+playerctl
