@@ -123,3 +123,4 @@ xfsprogs
 xl2tpd
 zsh
 os-prober
+pacman-contrib
